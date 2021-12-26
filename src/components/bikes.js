@@ -5,7 +5,7 @@ function Bikes() {
         <div>
             <h1> Bikes </h1>
             <input type="checkbox" id="Yamaha" name="Rover" value="yamaha" /> Yamaha
-            <p>
+            <p className="yamaha-intro">
                 What is Lorem Ipsum?
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
                 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a 
@@ -14,7 +14,7 @@ function Bikes() {
                 and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
             </p>
             <input type="checkbox" id="merce" name="Rover" value="Mercedes" /> Car
-            <p>
+            <p className="merced-intro">
                 Why do we use it?
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its 
                 layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
@@ -24,7 +24,7 @@ function Bikes() {
                 purpose (injected humour and the like).
             </p>
             <input type="checkbox" id="honda" name="Honda" value="Honda" />Honda
-            <p>
+            <p className="honda-intro">
                 Why do we use it?
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its 
                 layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
