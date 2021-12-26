@@ -6,16 +6,16 @@ function Current() {
     color: "orange",
     backgroundColor: "grey"
   }
-    const date = new Date()
+    const date = new Date(2021, 6, 31, 13)
     const hours = date.getHours()
     let timeOfDay 
   
     if (hours < 12) {
       this.timeOfDay = "Morning"
-      styles.color = "blue"
+      styles.color = "green"
     }else if (hours >= 12 && hours < 17) {
       timeOfDay = "afternoon"
-      styles.color = "blue"
+      styles.color = "green"
     }else {
       timeOfDay = "Night"
       styles.color = "purple"
