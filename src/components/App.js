@@ -3,20 +3,20 @@
  import Cars from './cars';
  import Current from './Current';
  import ContactCard from './contactcard';
-
+ import cardsData from './cardsData';
 
 function App() {
+  const result = cardsData.map(card => <ContactCard
+    key={card.id}
+    name={card.name}
+    phone={card.phone}
+    email={card.email}
+    />)
+    console.log(result);
+
   return (
     <div>
-      <ContactCard
-      contact = {
-        {name:"Miky mouse",
-        imgUrl:"./NSX_GT3_Pebble_2021.0.jpeg",
-        phone : "0701042287",
-        email : "kbjude@gmail.com"}
-      }
-      />
-
+      {result}
       <Current />
       <Bikes />
       <Cars />
