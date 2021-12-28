@@ -10,7 +10,10 @@ const CardContainer = (props) => {
             </div>
             <div>
                 <h2> Name: {props.name}</h2>
-                
+                <p> Grade: {props.grade} </p>
+                <p> Address: {props.address} </p>
+                <p> Notes: {props.notes} </p>
+                <p> Status: {props.status} </p>
             </div>
         </div> 
     )
