@@ -9,11 +9,11 @@ const CardContainer = (props) => {
                 <p>Email: {props.email}</p>
             </div>
             <div>
-                <h2> Name: {props.name}</h2>
-                <p> Grade: {props.grade} </p>
-                <p> Address: {props.address} </p>
-                <p> Notes: {props.notes} </p>
-                <p> Status: {props.status} </p>
+                <h2 style={{display: props.name ? "block" : "none"}}> Name: {props.name}</h2>
+                <p style={{color: !props.name && "green"}}> Grade: {props.grade} </p>
+                <p style={{color: !props.name && "green"}}> Address: {props.address} </p>
+                <p style={{color: !props.name && "green"}}> Notes: {props.notes} </p>
+                <p style={{color: !props.name && "green"}}> Status: {props.status} </p>
             </div>
         </div> 
     )

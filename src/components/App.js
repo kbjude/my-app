@@ -26,9 +26,9 @@ function App() {
   return (
     <div>
       <div className="topMenu">
-        <div>
+        {/* <div>
           {result}
-        </div>
+        </div> */}
         <div>
           {study}
         </div>
