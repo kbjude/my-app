@@ -1,7 +1,7 @@
 const cardsData = [
     {
         id: 0,
-        name : "",
+        name : "Louis Hamilton",
         phone : "07010468403",
         email : "kenya@gmail.com"
     },
