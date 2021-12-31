@@ -12,9 +12,20 @@ class App extends Component {
     super()
     this.state={
       todos: cardsData,
-      isLoading: true
+      isLoading: true,
+      count: 0,
     }
+    this.onChange = this.onChange.bind(this)
   } 
+
+  onChange() {
+    this.setState(prevState => {
+      return {
+        count: prevState.count - 2
+      }
+    })
+  }
+  
 
   componentDidMount() {
     setTimeout(() => {
@@ -25,7 +36,7 @@ class App extends Component {
   }
 
   render(){
-    const result = this.todos.map(card => <ContactCard
+    const result = this.state.todos.map(card => <ContactCard
       key={card.id}
       name={card.name}
       phone={card.phone}
@@ -44,6 +55,11 @@ class App extends Component {
     return (
       <div>
         <div className="topMenu">
+          <div>
+            <h1>{this.state.count}</h1>
+            <button onClick={this.onChange}> Change State </button>
+          </div>
+        <input type="checkbox" id="Yamaha" name="Rover" value="yamaha" /> Yamaha
           {/* <div>
             {result}
           </div> */}

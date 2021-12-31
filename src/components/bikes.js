@@ -1,10 +1,10 @@
 import React from "react";
 
-function Bikes() {
+function Bikes(props) {
     return (
         <div>
             <h1> Bikes </h1>
-            <input type="checkbox" id="Yamaha" name="Rover" value="yamaha" /> Yamaha
+            <input type="text" id="yahamaha" name="yamaha" />
             <p className="yamaha-intro">
                 What is Lorem Ipsum?
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
