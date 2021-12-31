@@ -23,6 +23,7 @@ class App extends Component {
       return {
         count: prevState.count - 2
       }
+      console.log("Clicked  me")
     })
   }
   
@@ -68,8 +69,8 @@ class App extends Component {
           </div>
         </div>
         <Current />
-        <Bikes />
-        <Cars />
+        <Bikes handleChange={this.onChange}/>
+        <Cars handleChange={this.onChange}/>
       </div>
     );
       }

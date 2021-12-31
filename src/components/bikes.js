@@ -13,7 +13,13 @@ function Bikes(props) {
                 unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
                 and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
             </p>
-            <input type="checkbox" id="merce" name="Rover" value="Mercedes" /> Car
+            <input 
+                type="checkbox" 
+                id="merce" 
+                name="Rover" 
+                value="Mercedes"  
+                onChange={() => props.handleChange(props.id)}
+            /> Car
             <p className="merced-intro">
                 Why do we use it?
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its 
