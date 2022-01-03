@@ -16,6 +16,7 @@ class App extends Component {
       count: 0,
     }
     this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange(this)
   } 
 
   onChange() {
@@ -23,8 +24,22 @@ class App extends Component {
       return {
         count: prevState.count - 2
       }
-      console.log("Clicked  me")
     })
+  }
+
+  handleChange(id){
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos.map(todo => {
+        if(todo.id === id){
+          todo.completed = !todo.completed
+        }
+        return todo
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
+    console.log("Changed", id)
   }
   
 
@@ -69,8 +84,8 @@ class App extends Component {
           </div>
         </div>
         <Current />
-        <Bikes handleChange={this.onChange}/>
-        <Cars handleChange={this.onChange}/>
+        <Bikes handleChange={this.handleChange} />
+        <Cars handleChange={this.onChange} />
       </div>
     );
       }
