@@ -1,5 +1,5 @@
  import '../App.css';
- import React, {Component} from 'react';
+ import React from 'react';
  import Bikes from './bikes';
  import Cars from './cars';
  import Current from './Current';
@@ -7,16 +7,18 @@
  import cardsData from './cardsData';
  import Students from './students';
 
-class App extends Component {
+class App extends React.Component {
   constructor(){
     super()
     this.state={
       todos: cardsData,
       isLoading: true,
       count: 0,
+      isLoggedIn: false
     }
     this.onChange = this.onChange.bind(this)
-    this.handleChange = this.handleChange(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   } 
 
   onChange() {
@@ -41,6 +43,14 @@ class App extends Component {
     })
     console.log("Changed", id)
   }
+
+  handleClick() {
+   this.setState(prevState => {
+     return {
+       isLoggedIn: !prevState.isLoggedIn
+     }
+   })
+  }
   
 
   componentDidMount() {
@@ -52,6 +62,9 @@ class App extends Component {
   }
 
   render(){
+
+    let buttonText = this.state.isLoggedIn ? "LOG OUT" : "LOGIN"
+
     const result = this.state.todos.map(card => <ContactCard
       key={card.id}
       name={card.name}
@@ -74,6 +87,10 @@ class App extends Component {
           <div>
             <h1>{this.state.count}</h1>
             <button onClick={this.onChange}> Change State </button>
+          </div>
+          <div>
+            <h1>{this.state.isLoggedIn}</h1>
+            <button onClick={this.handleClick}> {buttonText} </button>
           </div>
         <input type="checkbox" id="Yamaha" name="Rover" value="yamaha" /> Yamaha
           {/* <div>
